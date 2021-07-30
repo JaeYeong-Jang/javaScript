@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>Insert title here</title>
+</head>
+
+<body>
+
+	<h1>if문 예제</h1>
+	
+	<script type="text/javascript">
+		var num = prompt();
+		
+		if(num >= 60){
+			document.wirte("합격입니다.");
+		}else{
+			document.write("불합격입니다.");
+		}
+		
+	</script>
+	
+	<br><br>
+	
+	<script type="text/javascript">
+		var num2 = prompt();
+		
+		if(num2 > 0){
+			document.write("양수");
+		}else if(num2 < 0){
+			document.write("음수");
+		}else{
+			document.write("0");
+		}
+	</script>
+	
+	<br><br>
+	
+	<script type="text/javascript">
+		var num3 = prompt();
+		console.log(typeof num3);
+
+		var num4 = Number(num3);
+		console.log(typeof num4);
+		
+		var num3 = parseInt(num3); //자료형 변환
+		console.log(typeof num3);
+				
+		if( num3 === 0 ){
+			console.log("0점입니다.");
+			document.write("0점입니다.");
+		}else{
+			console.log("0점이 아닙니다.");
+			document.write("0점이 아닙니다.");
+		}
+	</script>
+</body>
+	
+
+
+</html>

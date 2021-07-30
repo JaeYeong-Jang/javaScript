@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>객체</h1>
+
+</body>
+
+<script type="text/javascript">
+	var name = "장재영"
+
+	var guestBookVo = {
+		name : "장재영",
+		password : "1234",
+		content : "위잉",
+		showInfo : function() {
+			console.log(this.name + ", " + this.password + ", " + this.content)
+		}
+	};
+
+	console.log(guestBookVo.name);
+	console.log(guestBookVo.password);
+	console.log(guestBookVo.content);
+	guestBookVo.showInfo();
+
+	var teacher = guestBookVo.name; //Vo에서 값 꺼내기
+	console.log(teacher);
+
+	//var teacher2 = guestBooKVo["name"]; //값을 꺼내는 다른방법
+	//console.log(teacher2);
+
+	//guestBookVo.name(); // 함수가 아닌 요소를 실행하려 할 때
+
+	console.log("===================================================");
+
+	var person01 = {
+		name : "장재영",
+		hp : "010-5284-5902",
+		company : "02-2212-6600"
+	};
+	var person02 = {
+		name : "김재영",
+		hp : "010-5234-5923",
+		company : "02-2322-6666"
+	};
+
+	var person03 = {
+		name : "박재영",
+		hp : "010-3184-5572",
+		company : "02-1235-6234"
+	};
+	
+	/*
+	var personArray = [person01, person02, person03];
+	console.log(personArray);
+	*/
+	
+	var personArray2 = [];
+	personArray2[0] = person01;
+	personArray2[1] = person02;
+	personArray2.push(person03);
+	
+	console.log(personArray2);
+	
+	personArray2.pop();
+	console.log(personArray2);
+	
+	for(var i = 0; i < personArray2.length; i++){
+		console.log(personArray2[i].name);
+		console.log(personArray2[i].hp);
+	}
+	
+</script>
+
+</html>

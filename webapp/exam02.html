@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>Insert title here</title>
+</head>
+
+<body>
+
+	<h1>자바 스크립트</h1>
+
+	<h2>변수선언</h2>
+
+	<p>개발자모드 console탭에서 확인</p>
+
+	<script type="text/javascript">
+		//변수 선언법
+		//자료형을 쓰지 않는다.
+
+		console.log("변수 선언 -----------------------------");
+
+		var no = 3; //number no;
+		var str; //string str;
+		var bool; //boolean bool;
+	</script>
+	
+	<script type="text/javascript">
+		//같은 이름의 변수 선언
+		
+		var name = "정우성";
+		var name = "장재영";
+		
+		//변수의 이름이 같을 경우 나중에 선언된 변수의 값을 출력한다.
+		console.log(name);
+		
+		var person = "정우성";
+		person = "유재석";
+		console.log(person);
+		
+		console.log("----------------------");
+		
+	</script>
+
+	<script type="text/javascript">
+		//자료형은 대입시 결정된다.
+		
+		var data;
+		console.log(typeof data); //undefined
+		
+		data = 15;
+		console.log(typeof data); // number
+		
+		data = "안녕";
+		console.log(typeof data); // string
+		
+		data = 3<5;
+		console.log(typeof data); // boolean
+	
+		console.log("----------------------");
+		
+	</script>
+	
+	<script type="text/javascript">
+		// undefined, null 비교
+		
+		var myVar01;
+		var myVar02 = null;
+		
+		console.log(myVar01); //undefined //--> 변수 선언 후 값 대입하지 않은 것
+		console.log(myVar02); //null --> null이라는 값을 대입한 것 하나의 값으로 취급
+		
+		console.log("----------------------");
+		
+	</script>
+		
+	<script type="text/javascript">
+		//동등(==) 연산자, 일치(===) 연산자 비교
+		console.log(123==123);
+		console.log("123"==123);  //true js가 자동으로 문자열 123을 숫자 123으로 변환한다.
+		
+		console.log("123"===123); //false 자료형까지 빡시게 비교
+		
+		var myVar03; 		// undefined
+		var myVar04 = null; // null
+		
+		console.log( myVar03 == myVar04 ); //true
+		console.log( myVar03 === myVar04 ); //false
+		
+		console.log("공백 문자열 동등, 일치 비교");
+		
+		console.log('' == false); //true
+		console.log('' == 0 );	  //true
+		console.log('' === 0 );	  //false
+		console.log(0 == false);  //true
+		
+		console.log("----------------------");
+		
+	</script>
+
+</body>
+
+
+</html>

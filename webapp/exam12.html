@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>Insert title here</title>
+</head>
+
+<body>
+
+	<h1>배열</h1>
+
+</body>
+
+<script type="text/javascript">
+	console.log("-------------배열--------------");
+
+	var array = [];
+
+	array[0] = 1;
+	array[1] = 2.5;
+	array[2] = "안녕";
+	array[4] = "hello!"
+	
+	console.log(array);
+	console.log(array[0]);
+	console.log(array[1]);
+	console.log(array[2]);
+	console.log(array[3]);
+	console.log(array[4]);
+	
+	console.log("-------------------------------");
+	
+	var array01 = [129, 314, 6.3, "위잉"];
+	console.log(array01);
+	
+	array01[4] = 72;
+	console.log(array01);
+	
+	array01.push(100);
+	console.log(array01);
+	
+	array01[3] = 5.2;
+	console.log(array01);
+	
+	array01.pop();
+	console.log(array01);
+	
+	for(var i = 0; i < array01.length; i++){
+		console.log(array01[i]);
+	}
+	console.log("-------------------------------");
+	
+	//익명함수
+	var sum2 = function (){
+		return 3+4;
+	}
+	
+	var array02 = [273, 6.2, "호이", 3>4, sum, sum2, function(){	return "익명함수";}, [11,12,13]];
+	
+	console.log(array02[0]);
+	console.log(array02[1]);
+	console.log(array02[2]);
+	console.log(array02[3]);
+	console.log(array02[4](5,1));
+	console.log(array02[5]());
+	console.log(array02[6]()); 	  //함수도 변수 취급 가능(배열에도 담을 수 있음)
+	console.log(array02[7][0]);   //배열에 배열을 담을 수 있음 (2차원 배열)
+	console.log(array02[7][1]);
+	console.log(array02[7][2]);
+	
+	
+	//기명함수
+	function sum(a,b){
+		return a+b;
+	}
+</script>
+
+
+</html>

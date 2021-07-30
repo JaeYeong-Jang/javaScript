@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>Insert title here</title>
+</head>
+
+<body>
+
+	<script type="text/javascript">
+		//이름이 있는 함수(기명함수, 선언적 함수) **********정의 부터 해석된다.
+
+		document.write("3 + 4 = " + plus(3, 4));
+		document.write("<br>");
+		document.write("1.4 + 2.5 = " + plus(1.4, 2.5));
+		document.write("<br>");
+		document.write(plus("안녕", "하세요"));
+		document.write("<br>");
+
+		//함수 정의 ----> 실행 시 함수정의부터 해석된다. 위치 상관x
+		function plus(num1, num2) {
+			var sum = num1 + num2;
+
+			return sum;
+		}
+
+		//이름이 없는 함수(익명함수) ---> 이름이 없어서 바로 사용해야 함 (함수를 변수에 넣고 사용함) --> 재사용을 위해 변수에 할당해 사용
+		// 익명함수는 선언 위치가 중요하다. 익명함수는 변수에 담아놓기 때문에 사용위치보다 위에 선언되어야 한다.
+		var minus = function(num1, num2) {
+			var sum = num1 - num2;
+			return sum;
+		}
+		
+		console.log(typeof minus); //type function
+		
+		var result0 = minus(5,4);
+		console.log(result0);
+		document.write(result0);
+		document.write("<br>");
+		
+		var result01 = minus(5,2.4);
+		console.log(result01);
+		document.write(result01);
+		document.write("<br>");
+		
+		var result02 = minus("안녕","하세요");
+		console.log(result02);
+		document.write(result02);
+		document.write("<br>");
+		
+		
+	</script>
+
+</body>
+
+
+</html>
