@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript"
+	src="/js/assets/js/jquery/jquery-1.12.4.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<ul>
+		<li id="first" class="red">첫번째 아이템입니다.</li>
+		<li id="second" class="blue"><strong>두번째 아이템입니다.</strong></li>
+		<li id="third" class="del">세번째아이템입니다.</li>
+		<li><strong>네번째 아이템입니다.</strong></li>
+		
+	</ul>
+	<button id="btn" type="button">li요소추가</button>
+</body>
+
+<script type="text/javascript">
+	//li추가 버튼 클릭 했을 때 
+	$("#btn").on("click",function(){
+		console.log("버튼 클릭");
+		
+		$("ul").append("<li id='five'>다섯번쨰 아이템입니다.</li>");
+		$("ul").append("<li id='six'>여섯번째 아이템입니다.</li>");
+		$("ul").append("<li id='seven'>일곱번째 아이템입니다.</li>");
+		
+	})
+	
+	/*
+	$("li").on("click", function(){
+		console.log("li태그 출력");
+		var $this = $(this);
+		console.log($this);
+	});
+	*/
+	
+	//
+	$("ul").on("click", "li", function(){ //ul태그를 클릭하면 li 태그에게 시킨다.(위임한다.)
+		console.log("li태그 클릭");
+		var $this = $(this);
+		console.log($this);
+		
+	});
+	
+</script>
+
+
+</html>

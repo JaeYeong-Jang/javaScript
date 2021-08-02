@@ -7,7 +7,7 @@
 </head>
 <body>
 
-	<h1 id="event">이벤트</h1> <!-- h1태그는 id로 받아야하나 class로 받아야하나? -->
+	<h1>이벤트</h1> <!-- h1태그는 id로 받아야하나 class로 받아야하나? -->
 	
 	<h2>h2태그_1</h2>
 	<h2>h2태그_2</h2>
@@ -32,8 +32,8 @@
 	window.onload = function(){
 		var testButton = document.getElementById("btn");
 		var testArea = document.getElementById("display");
-		var testEvent = document.getElementById("event");
-		
+	
+		var h1Tag = document.getElementsByTagName("h1");   //h1의 이름을 가지는 태그 받기
 		var h2Array = document.getElementsByTagName("h2"); //h2의 이름을 가지는 태그들 받기(배열로 받음)
 		console.log(h2Array);
 		
@@ -50,13 +50,14 @@
 		h2Array[1].onclick = function(){
 				testArea.innerHTML = "2번째 h2태그 클릭했슈"
 		};
-		
+				
 		h3Array[1].onclick = function(){
-			testEvent.innerHTML = '<a href="http://www.daum.net">http://www.daum.net</a>'
+			h1Tag[0].innerHTML = '<a href="http://www.daum.net">http://www.daum.net</a>'
 		};
 		
 	};
 	
+	// 위와 같은 반복적인 이벤트 처리를 위해 jquery를 사용한다.
 	
 </script>
 
